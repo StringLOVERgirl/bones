@@ -1,10 +1,16 @@
 window.addEventListener('DOMContentLoaded',()=>{
 let video = document.querySelector('video')
 let playstatus = document.querySelector('.player')
-// let psflag = false
-let interval = false
-      window.addEventListener('click', (event)=>{player(event)
+let listener = window.innerWidth < 600 ? 'touchstart' : 'click'
+let interval = false;
+      window.addEventListener(listener, (event)=>{player(event)
         pshide(event)})
+        // ['click', 'touchstart'].forEach(eventType => {
+        //   window.addEventListener(eventType, (event) => {
+        //     player(event)
+        //       pshide(event)}, { passive: false })
+        //     })
+          
       window.addEventListener('keydown', player)
       window.addEventListener('mousemove', pshide)
       // playstatus.addEventListener('click', player)
