@@ -152,7 +152,25 @@ font-size: 1.15em;
 overflow-y: scroll;
 
       }
-      
+      @media (orientation: landscape) and (max-height: 650px) {
+        .player {
+          height: 12vh;
+        }
+        header {
+          height: 6em;
+          padding-bottom: 1.2em;
+          backdrop-filter: unset
+        }
+        .perelivashka {
+          font-size: 1.4em;
+          margin-inline: unset
+        }
+      }
+
+      /* .lyr_br {
+      height: 2em;
+      } */
+
       @media (orientation: portrait) {
     
         #app {
@@ -165,6 +183,7 @@ overflow-y: scroll;
         header {
           justify-content: center;
           height: 6em;
+          backdrop-filter: unset
         }
         .video_cont {
           height: 100dvh;
@@ -200,6 +219,7 @@ overflow-y: scroll;
     .player {
       margin-left: 0;
     }
+
       }
     </style>
   </head>
@@ -220,6 +240,7 @@ overflow-y: scroll;
         <div class="lyrics_cont">
           <div class="lyrics">
            <h2>Lyrics</h2> 
+            <!-- <div class="lyr_br"></div> -->
             <br>
             <br>
             With even madness, I practice with all you bastards
