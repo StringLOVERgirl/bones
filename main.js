@@ -1,4 +1,4 @@
-
+window.addEventListener('DOMContentLoaded',()=>{
 let video = document.querySelector('video')
 let playstatus = document.querySelector('.player')
 // let psflag = false
@@ -52,3 +52,4 @@ let interval = false
     }, 3000);
       }
       console.log(video)
+      })
