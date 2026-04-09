@@ -168,7 +168,7 @@ overflow-y: scroll;
         }
         .video_cont {
           height: 70dvh;
-          /* position: absolute; */
+          position: relative;
         }
         .lyrics_cont {
           height: 100dvh;
@@ -176,10 +176,12 @@ overflow-y: scroll;
         }
         video {
           position: absolute;
+          
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
-          width: unset;
+          height: 100%;
+          width: auto;
          justify-self: center;
         }
       }
