@@ -3,8 +3,8 @@ let video = document.querySelector('video')
 let playstatus = document.querySelector('.player')
 // let psflag = false
 let interval = false
-      window.addEventListener('click', ()=>{player()
-        pshide()})
+      window.addEventListener('click', (event)=>{player(event)
+        pshide(event)})
       window.addEventListener('keydown', player)
       window.addEventListener('mousemove', pshide)
       // playstatus.addEventListener('click', player)
