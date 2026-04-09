@@ -1,9 +1,9 @@
 window.addEventListener('DOMContentLoaded',()=>{
 let video = document.querySelector('video')
 let playstatus = document.querySelector('.player')
-let listener = window.innerWidth < 600 ? 'touchstart' : 'click'
+
 let interval = false;
-      window.addEventListener(listener, (event)=>{player(event)
+      window.addEventListener('click', (event)=>{player(event)
         pshide(event)})
         // ['click', 'touchstart'].forEach(eventType => {
         //   window.addEventListener(eventType, (event) => {
