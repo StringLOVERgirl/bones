@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+
+      .app {
+        position: relative;
+      }
+
+      video {
+        height: 100vh;
+        width: 100vw;
+        object-fit: cover;
+      }
+      @keyframes cube-rotate {
+        0%, 33% {
+          transform: unset
+        }
+  33% {
+    transform: perspective(600px) rotate3d(0.6, 0.05, 0.2, 0deg) ;
+  }
+
+ to {
+    transform: perspective(600px) rotate3d(0.6, 0.05, 0.2, 20deg) ;
+  }
+}
+
+      .title_cont {
+        
+        /* border-radius: 15px; */
+        
+        isolation: isolate;
+        /* left: 50%; */
+        /* transform: translateX(-50%); */
+        
+        animation: cube-rotate 3s ease-out infinite alternate;
+/* background: antiquewhite; */
+mix-blend-mode: difference;
+padding-inline: 1em;
+/* border-radius: 15px; */
+
+      }
+
+      @keyframes shimmer {
+        0%, 33% {
+    filter: contrast(190%) brightness(500%);
+    opacity: 0;
+  }
+
+ 
+
+  33% {
+    filter: contrast(190%) brightness(500%);
+ }
+
+   to {
+    filter: contrast(190%) brightness(130%) ;
+    /* opacity: 1; */
+  }}
+      .perelivashka {
+        margin-inline: 1em;
+        /* backdrop-filter: blur(5px);  */
+        /* border-radius: 15px;  */
+        font-family: raleway;
+        font-size: 2em;
+        line-height: 1.2;
+        /* color: rgb(0, 0, 0); */
+        letter-spacing: 0.1em;
+        text-rendering: optimizeSpeed;
+        color: transparent;
+        background: linear-gradient(24deg, rgba(130, 162, 150, 0.904) 10%, rgba(166, 51, 143, 0.487)) 30%, url("data:image/svg+xml,%3Csvg viewBox='0 0 400 310' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.55' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        -webkit-background-clip: text;
+        animation: shimmer 3s ease-out infinite alternate;
+      }
+  
+      header {
+        backdrop-filter: blur(5px);
+        width: fit-content;
+        /* left: 5vw; */
+        /* border-radius: 15px; */
+        height: 8em;
+        position: absolute;
+        z-index: 3;
+                display: flex;
+        align-items: end;
+        /* place-content: center; */
+        padding-bottom: 1.5em;
+        bottom: 0;
+        /* mix-blend-mode: difference; */
+        /* background: rgba(177, 89, 126, 0.5); */
+      }
+      .source {
+        position: absolute;
+        backdrop-filter: blur(3px);
+        font-family: raleway;
+        bottom: 0;
+        right: 0;
+        font-size: 0.75em;
+        color: rgba(250, 235, 215, 0.642);
+        padding-right: 1em;
+        padding-bottom: 0.45em;
+      }
+      .player {
+        --ps: url('./noun-play-6054301.svg')  center / contain no-repeat;
+        --opacity: 1;
+        background: var(--ps) ;
+        transition: background 0.3s ease-out, opacity 0.3s;
+        position: absolute;
+        z-index: 3;
+        opacity: var(--opacity);
+        height: 10vh;
+        aspect-ratio: 1;
+        margin: 1em;
+        mix-blend-mode: difference;
+      }
+      button {
+        border: unset;
+      }
+      .lyrics_cont {      
+        padding: 1em;
+        background: rgba(0, 0, 0, 0.1);
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        font-family: dosis;
+        height: 100%;
+        /* background: rgba(127, 255, 212, 0.153); */
+        backdrop-filter: blur(5px);
+      }
+      .lyrics::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+}
+      .lyrics {
+        margin-top: 12vh;
+        /* position: absolute; */
+        height: 63vh;
+        color: white;
+line-height: 1.5;
+font-size: 1.15em;
+overflow-y: scroll;
+
+      }
+      
+      @media (orientation: portrait) {
+        header {
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+      <div class="title_cont">
+        <div class="perelivashka">Bones <br> ChampagneInTheGraveyard</div>
+        <div class="title_bg"></div>
+      </div>
+      </header>
+      <div class="video_cont">
+        <!-- <div class="overlay"></div> -->
+        <div class="player_cont">
+          <button class="player"></button>
+        </div>
+        <video src="./Bones - ChampagneInTheGraveyard.mp4"></video>
+        <div class="lyrics_cont">
+          <div class="lyrics">
+           <h2>Lyrics</h2> 
+            <br>
+            <br>
+            With even madness, I practice with all you bastards
+            <br>
+Lay 'em on a rack, now I'm cracking 'up as they passing <br>
+
+Ash 'em like tobacco, I cash in and then I stack 'em <br>
+They wonder how it happened now I'm enveloped in madness <br>
+Champagne in the graveyard, toast to the kr's <br>
+Two twelves in the trunk banging like a ar <br>
+I gotta thank ya'll for helping me take off <br>
+Yet to truly try, cause I know if I did I'd break ya'll <br>
+Down to set em in, problems less settling <br>
+You need to stop sipping and popping all of them sedatives <br>
+That sh!t don't heal you <br>
+That sh!t won't help you <br>
+That sh!t just break you <br>
+And put you in hell, true <br>
+Been speaking this for years <br>
+A lot of people laughed <br>
+Till they laying on they back knowing this breath's the last <br>
+I wouldn't wish that on any human <br>
+Only thing I'm concerned about is bringing the music <br>
+<br>
+The original hundred sesh songs stay on repeatedly <br>
+The ones that nobody’s heard, I bump 'em religiously <br>
+The guideline to this sh*t that I now bring you <br>
+You ain't gotta try when you know that it's in you <br>
+Garage nights, double wide wraps, double stuffed <br>
+That was the recipe for the sh*t that we bump <br>
+Old news, cold tunes, and gold jewels <br>
+Scholar like sh0es, young duke in a suit <br>
+Pocket watch ticking, sweater untucked <br>
+They say it's preparation, I say that it's dumb luck <br>
+No such thing as fate when you don't give a f*ck <br>
+White punk on dope coming straight up out the dump <br>
+SESH
+          </div>
+        </div>
+      </div>
+      <div class="source">Source: https://www.youtube.com/watch?v=Vl3_w7_8gSc</div>
+    </div>
+    <script type="module" src="main.js">
+    </script>
+  </body>
+</html>
