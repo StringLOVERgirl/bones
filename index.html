@@ -155,6 +155,18 @@ overflow-y: scroll;
       @media (orientation: portrait) {
         header {
           justify-content: center;
+          height: 6em;
+        }
+        .video_cont {
+          /* position: relative; */
+        }
+        video {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: unset;
+         justify-self: center;
         }
       }
     </style>
