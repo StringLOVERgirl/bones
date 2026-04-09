@@ -12,7 +12,7 @@
         margin: 0;
       }
 
-      .app {
+      #app {
         position: relative;
       }
 
@@ -153,14 +153,10 @@ overflow-y: scroll;
       }
       
       @media (orientation: portrait) {
-        html {
-          height: 100dvh;
-          width: 100vw;
-          overflow: hidden;
-
-        }
+    
         #app {
           height: 100dvh;
+          width: 100vw;
                     overflow: hidden;
 
         }
@@ -188,7 +184,7 @@ overflow-y: scroll;
           height: 70dvh;
           width: 100vw;
          /* justify-self: center; */
-         object-fit: cover;
+         /* object-fit: cover; */
         }
       }
     </style>
