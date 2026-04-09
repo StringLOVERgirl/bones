@@ -153,10 +153,11 @@ overflow-y: scroll;
       }
       
       @media (orientation: portrait) {
-        .app {
-          overflow: hidden;
+        html {
           height: 100dvh;
           width: 100vw;
+          overflow: hidden;
+
         }
         header {
           justify-content: center;
@@ -164,6 +165,9 @@ overflow-y: scroll;
         }
         .video_cont {
           /* position: relative; */
+        }
+        .lyrics_cont {
+          width: 100vw;
         }
         video {
           position: absolute;
@@ -235,7 +239,7 @@ SESH
       </div>
       <div class="source">Source: https://www.youtube.com/watch?v=Vl3_w7_8gSc</div>
     </div>
-    <script type="module" src="/main.js">
+    <script type="module" src="main.js">
     </script>
   </body>
 </html>
