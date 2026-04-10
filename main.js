@@ -84,11 +84,11 @@ let interval = false;
             console.log(e,i)
             e.pause()}
           )
-          playstatus.style.setProperty('--ps', 'url(./noun-pause-2731843.svg) center / contain no-repeat')
+          playstatus.style.setProperty('--ps', 'url(noun-pause-2731843.svg) center / contain no-repeat')
         } else {
           pshide()
           video.pause() 
-          playstatus.style.setProperty('--ps', 'url(./noun-play-6054301.svg) center / contain no-repeat')
+          playstatus.style.setProperty('--ps', 'url(noun-play-6054301.svg) center / contain no-repeat')
          }
       }
     
