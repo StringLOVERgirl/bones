@@ -37,17 +37,14 @@
 
       .title_cont {
         
-        /* border-radius: 15px; */
-        
+
         isolation: isolate;
-        /* left: 50%; */
-        /* transform: translateX(-50%); */
-        
+
         animation: cube-rotate 3s ease-out infinite alternate;
-/* background: antiquewhite; */
+
 mix-blend-mode: difference;
 padding-inline: 1em;
-/* border-radius: 15px; */
+
 
       }
 
@@ -69,12 +66,11 @@ padding-inline: 1em;
   }}
       .perelivashka {
         margin-inline: 1em;
-        /* backdrop-filter: blur(5px);  */
-        /* border-radius: 15px;  */
+ 
         font-family: raleway;
         font-size: 2em;
         line-height: 1.2;
-        /* color: rgb(0, 0, 0); */
+        
         letter-spacing: 0.1em;
         text-rendering: optimizeSpeed;
         color: transparent;
@@ -86,18 +82,13 @@ padding-inline: 1em;
       header {
         backdrop-filter: blur(5px);
         width: fit-content;
-        /* left: 5vw; */
-        /* border-radius: 15px; */
         height: 8em;
         position: absolute;
         z-index: 3;
                 display: flex;
         align-items: end;
-        /* place-content: center; */
         padding-bottom: 1.5em;
         bottom: 0;
-        /* mix-blend-mode: difference; */
-        /* background: rgba(177, 89, 126, 0.5); */
       }
       .source {
         position: absolute;
@@ -114,7 +105,7 @@ padding-inline: 1em;
         --ps: url('./noun-play-6054301.svg')  center / contain no-repeat;
         --opacity: 1;
         background: var(--ps) ;
-        transition: background 0.3s ease-out, opacity 0.3s;
+        transition: background 0.3s ease-out, opacity 0.3s, transform 0.3s;
         position: absolute;
         z-index: 3;
         opacity: var(--opacity);
@@ -122,6 +113,9 @@ padding-inline: 1em;
         aspect-ratio: 1;
         margin: 1em;
         mix-blend-mode: difference;
+      }
+      .player:hover {
+        transform: scale(1.1);
       }
       button {
         border: unset;
@@ -134,7 +128,7 @@ padding-inline: 1em;
         top: 0;
         font-family: dosis;
         height: 100%;
-        /* background: rgba(127, 255, 212, 0.153); */
+        
         backdrop-filter: blur(5px);
       }
       .lyrics::-webkit-scrollbar {
@@ -144,7 +138,7 @@ padding-inline: 1em;
 }
       .lyrics {
         margin-top: 12vh;
-        /* position: absolute; */
+        
         height: 63vh;
         color: white;
 line-height: 1.5;
@@ -152,7 +146,126 @@ font-size: 1.15em;
 overflow-y: scroll;
 
       }
-      @media (orientation: landscape) and (max-height: 650px) {
+
+      .menubtn_cont {
+        position: absolute;
+        right: 0;
+        display: grid;
+        place-content: center;
+        margin-right: 0.75em;
+        height: 10vh;
+        aspect-ratio: 1;
+        backdrop-filter: blur(5px);
+        z-index: 5;
+      }
+      .menubtn {
+        --opacity: 1;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 0.5em;
+        padding: 0.2em;
+        background: transparent;
+        backdrop-filter: blur(5px);
+        transition: opacity 0.3s ease-out;
+        opacity: var(--opacity);
+      }
+      
+
+      .line1_active {
+        transform: translateY(-0.75em) rotate(45deg) translateX(20%);
+      }
+      .line2_active {
+        opacity: 0;
+      }
+      .line3_active {
+        transform: translateY(-0.75em);
+        opacity: 0;
+      }
+      .line4_active {
+        transform: translateY(-0.75em) rotate(-45deg) translateX(-20%) ;
+      }
+      
+      .line {
+        height: 2px;
+        width: 6vh;
+        background: rgba(156,163,240,0.78);
+        will-change: transform;
+        transition: transform 0.4s ease-out, opacity 0.2s
+      }
+      .line1 {
+        transform-origin: left;
+        position: relative;
+      }
+      .line4 {
+        top: 0.2em;
+        position: absolute;
+        transform-origin: right;
+        transition: transform 0.4s ease-out
+      }
+
+      .menu_cont {
+        position: absolute;
+        z-index: 4;
+        right: 0;
+        background: url('./203195-abstract-purple-and-black-blur-gradient-background\ \(2\).jpg') center  / cover;
+        height: 100dvh;
+        width: 100vw;
+        
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+        transition: clip-path 0.6s ease-out
+      }
+      .menu_onscreen {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      }
+      .menu {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+        font-family: dosis;
+      }
+      .menutext {
+        --color: white;
+        color: var(--color);
+        position: relative;
+        cursor: pointer;
+        transition: color 0.3s;
+        text-shadow: 0 0 20px aquamarine;
+      }
+      .menutext:hover::after {
+        opacity: 1;
+      }
+      .menutext::after{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: var(--color);
+        opacity: 0;
+        margin-top: 0.1em;
+        transition: opacity 0.1s ease-out, background 0.3s;
+      }
+
+      button {
+        cursor: pointer;
+      }
+      .bg_menu {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        /* d4c2d2 */
+        background: 
+        radial-gradient(farthest-corner at 40vw 0,#d4d4c23c,transparent 35%) no-repeat,
+        radial-gradient(farthest-corner at 55vw 120vh,#d4d4c23c,transparent 35%) no-repeat;
+      }
+      @media (orientation: landscape) and (max-height: 550px) {
         .player {
           height: 12vh;
         }
@@ -167,9 +280,14 @@ overflow-y: scroll;
         }
       }
 
-      /* .lyr_br {
-      height: 2em;
-      } */
+   
+      .heart {
+        height: 15vh;
+        aspect-ratio: 1;
+        position: absolute;
+        bottom: 0;
+        background: url('./27e62d217c81325dc738585497eef626.gif') center / contain no-repeat;
+      }
 
       @media (orientation: portrait) {
     
@@ -206,8 +324,7 @@ overflow-y: scroll;
           transform: translate(-50%, -50%);
           height: 70dvh;
           width: 100vw;
-         /* justify-self: center; */
-         /* object-fit: cover; */
+    
         }
         .title_cont {
           padding-inline: unset;
@@ -231,8 +348,29 @@ overflow-y: scroll;
         <div class="title_bg"></div>
       </div>
       </header>
+      <div class="menubtn_cont">
+        <button class="menubtn">
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+          <div class="line line3"></div>
+          <div class="line line4"></div>
+        </button>
+      </div>
+      <div class="menu_cont">
+        <div class="menu">
+          <div class="bg_menu"></div>
+          <div class="heart"></div>
+          <div class="menutext t1">DeadInDesignerClothes</div>
+          <div class="menutext t2 trees">WhereTheTreesMeetTheFreeway</div>
+          <div class="menutext t3 notworth">IAmCertainlyNotWorthYourTime...</div>
+          <div class="menutext t4">AirplaneMode</div>
+          <audio src="./DeadInDesignerClothes.mp3"></audio>
+          <audio src="./Bones - WhereTheTreesMeetTheFreeway (Skinny).mp3"></audio>
+          <audio src="./IAmCertainlyNotWorthYourTime... (1).mp3"></audio>
+          <audio src="./Bones - AirplaneMode.mp3"></audio>
+        </div>
+      </div>
       <div class="video_cont">
-        <!-- <div class="overlay"></div> -->
         <div class="player_cont">
           <button class="player"></button>
         </div>
@@ -240,7 +378,6 @@ overflow-y: scroll;
         <div class="lyrics_cont">
           <div class="lyrics">
            <h2>Lyrics</h2> 
-            <!-- <div class="lyr_br"></div> -->
             <br>
             <br>
             With even madness, I practice with all you bastards
