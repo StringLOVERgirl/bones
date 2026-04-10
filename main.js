@@ -54,19 +54,19 @@ let interval = false;
         if (tracks[tracknumber].paused) {
           pshide()
           video.pause()
-          playstatus.style.setProperty('--ps', 'url(./public//noun-play-6054301.svg) center / contain no-repeat')
+          playstatus.style.setProperty('--ps', 'url(/noun-play-6054301.svg) center / contain no-repeat')
           tracks[tracknumber].play()
           others[tracknumber].style.setProperty('--color','rgba(156,163,240,0.78)')
           if (typeof currenttype != 'number') currenttype = tracknumber
           console.log(currenttype + 123)
-          playstatus.style.setProperty('--ps', 'url(./public/noun-pause-2731843.svg) center / contain no-repeat')
+          playstatus.style.setProperty('--ps', 'url(/noun-pause-2731843.svg) center / contain no-repeat')
 
         }
         else {
           console.log('ap pause')
           pshide()
           tracks[tracknumber].pause()
-          playstatus.style.setProperty('--ps', 'url(./public/noun-play-6054301.svg) center / contain no-repeat')
+          playstatus.style.setProperty('--ps', 'url(/noun-play-6054301.svg) center / contain no-repeat')
 
         }
         tracks.forEach((e,i)=>{
@@ -86,11 +86,11 @@ let interval = false;
             console.log(e,i)
             e.pause()}
           )
-          playstatus.style.setProperty('--ps', 'url(./public/noun-pause-2731843.svg) center / contain no-repeat')
+          playstatus.style.setProperty('--ps', 'url(/noun-pause-2731843.svg) center / contain no-repeat')
         } else {
           pshide()
           video.pause() 
-          playstatus.style.setProperty('--ps', 'url(./public/noun-play-6054301.svg) center / contain no-repeat')
+          playstatus.style.setProperty('--ps', 'url(/noun-play-6054301.svg) center / contain no-repeat')
          }
       }
     
