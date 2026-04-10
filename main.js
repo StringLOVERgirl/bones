@@ -94,7 +94,7 @@ let interval = false;
     
 
       function pshide(){
-        
+        if (window.innerWidth < 550 || window.innerHeight < 550 ) return
         clearTimeout(interval);
         permanentelements.forEach(e=>
     e.style.setProperty('--opacity', 1))
