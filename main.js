@@ -1,3 +1,5 @@
+
+
 window.addEventListener('DOMContentLoaded',()=>{
 let video = document.querySelector('video')
 let playstatus = document.querySelector('.player')
