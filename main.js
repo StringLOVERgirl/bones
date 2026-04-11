@@ -11,6 +11,9 @@ console.log(others)
 let tracks = Array.from(document.querySelectorAll('audio'))
 const permanentelements = [playstatus, menu]
 let currenttype = null
+let altbgbtn = document.querySelector('.altbg')
+altbgbtn.addEventListener('click', ()=>menu_cont.classList.toggle('menu_alt_bg'))
+
 
 
 others.forEach((e,i)=>e.addEventListener('click',(event)=> newplayer(event, 'other', i)))

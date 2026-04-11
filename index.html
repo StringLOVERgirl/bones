@@ -218,6 +218,10 @@ overflow-y: scroll;
         clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
         transition: clip-path 0.6s ease-out
       }
+      .menu_alt_bg {
+        background: rgba(0, 0, 0, 0.9)
+        url(./public/bag-ezgif.com-video-to-gif-converter.gif) left bottom / 50%;
+      }
       .menu_onscreen {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
       }
@@ -236,7 +240,7 @@ overflow-y: scroll;
         position: relative;
         cursor: pointer;
         transition: color 0.3s;
-        text-shadow: 0 0 20px aquamarine;
+        text-shadow: 0 0 20px rgba(127, 255, 212, 0.8);
       }
       .menutext:hover::after {
         opacity: 1;
@@ -266,6 +270,27 @@ overflow-y: scroll;
         radial-gradient(farthest-corner at 40vw 0,#d4d4c23c,transparent 35%) no-repeat,
         radial-gradient(farthest-corner at 55vw 120vh,#d4d4c23c,transparent 35%) no-repeat;
       }
+
+      .altbgcont {
+        position: absolute;
+        background: rgba(0, 0, 0, 0.5);
+        background: url(./public/27e62d217c81325dc738585497eef626.gif) center / 120%;
+        border-radius: 30px;
+        padding-inline: 1em;
+        padding-block: 0.2em;
+        top: 0;
+        left: 0;
+        margin: 2em;
+        white-space: nowrap;        
+        z-index: 4;
+      }
+      .altbg{
+        background: unset;
+        font-family: dosis;
+        font-size: 1.1em;
+        color: white;
+      }
+      
       @media (orientation: landscape) and (max-height: 550px) {
         .player {
           height: 12vh;
@@ -338,7 +363,10 @@ overflow-y: scroll;
       margin-left: 0;
       height: 8vh;
     }
-
+    .menu_alt_bg {
+        background: rgba(0, 0, 0, 0.9)
+        url(./public/bag-ezgif.com-video-to-gif-converter.gif) left bottom / 82%;
+      }
       }
     </style>
   </head>
@@ -358,8 +386,11 @@ overflow-y: scroll;
           <div class="line line4"></div>
         </button>
       </div>
-      <div class="menu_cont">
+      <div class="menu_cont menu_alt_bg">
         <div class="menu">
+          <div class="altbgcont">
+            <button class="altbg">alt bg</button>
+          </div>        
           <div class="bg_menu"></div>
           <div class="heart"></div>
           <div class="menutext t1">DeadInDesignerClothes</div>
