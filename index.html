@@ -299,6 +299,13 @@ overflow-y: scroll;
         font-size: 1.1em;
         color: white;
       }
+      .altoverlay {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        /* background: rgba(255, 0, 0, 0.1); */
+        backdrop-filter: blur(1px);
+      }
       
       @media (orientation: landscape) and (max-height: 550px) {
         .player {
@@ -377,6 +384,7 @@ overflow-y: scroll;
         url(./public/bag-ezgif.com-video-to-gif-converter.gif) left bottom / 82%;
       }
       }
+
     </style>
   </head>
   <body>
@@ -397,6 +405,7 @@ overflow-y: scroll;
       </div>
       <div class="menu_cont menu_alt_bg">
         <div class="menu">
+          <div class="altoverlay"></div>
           <div class="altbgcont">
             <button class="altbg">alt bg</button>
           </div>        
