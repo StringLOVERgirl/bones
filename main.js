@@ -6,7 +6,7 @@ let playstatus = document.querySelector('.player')
 const lines = document.querySelectorAll('.line')
 let menu = document.querySelector('.menubtn')
 let menu_cont = document.querySelector('.menu_cont')
-let others = Array.from(document.querySelectorAll('.menutext')).filter((e,i)=>i<4)
+let others = Array.from(document.querySelectorAll('.menutext')).filter((e,i)=>i<10)
 console.log(others)
 let tracks = Array.from(document.querySelectorAll('audio'))
 const permanentelements = [playstatus, menu]
